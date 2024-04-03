@@ -1,0 +1,257 @@
+.footer {
+    color: $white;
+    text-align: center;
+    &-wrapper {
+        background-color: $accent;
+        padding-top: 65px;
+        padding-bottom: 45px;
+        max-width: 100%;
+        margin: 0px auto;
+    }
+    &__logo {
+        font-family: $fontTitle;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 1.33;
+        text-align: center;
+        color: $white;
+        display: inline-block;
+        margin-bottom: 50px;
+    }
+    &__text {
+        p {
+            margin-bottom: 0px;
+        }
+        a {
+            color: $white;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.footer-menu {
+    max-width: 1600px;
+    margin: 0px auto;
+    padding: 21px 0px;
+    border-top: 2px solid $btnTextColor;
+    border-bottom: 2px solid $btnTextColor;
+    margin-bottom: 40px;
+
+    @media (max-width: 1800px)  {
+        max-width: 1362px;
+    }
+
+    @media (max-width: 1440px)  {
+        max-width: 85%;
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        align-items: center;
+        padding-left: 0px;
+        margin: 0px;
+    }
+    .menu-item {
+        a {
+            text-transform: uppercase;
+            color: $textColor;
+            font-family: $fontText;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.96px;
+            transition: all .2s ease;
+            margin: 0px 20px;
+            position: relative;
+            &:hover {
+                opacity: .7;
+            }
+
+        }
+
+        &.menu-booking-item {
+            a {
+                border: 1px solid $white;
+                background: $white;
+                padding: 8px 18px;
+
+                @media (max-width: 992px) {
+                    display: inline-flex;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
+
+.footer-menu-bottom {
+    max-width: 1600px;
+    margin: 0px auto;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+
+    @media (max-width: 1800px)  {
+        max-width: 1362px;
+    }
+
+    @media (max-width: 1440px)  {
+        max-width: 85%;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        align-items: center;
+        padding-left: 0px;
+        margin: 0px;
+
+        @media (max-width: 768px)  {
+            flex-direction: column;
+        }
+    
+    }
+    .menu-item {
+        display: flex;
+
+        @media (max-width: 768px)  {
+            margin-bottom: 5px;
+        }
+
+        a {
+            background-color: transparent;
+            color: $textColor;
+            text-transform: uppercase;
+            letter-spacing: 0.96px;
+            font-size: 16px;
+            line-height: 20px;
+            opacity: .6;
+            transition: all .2s ease;
+
+            &:hover {
+                background-color: transparent;
+                color: $textColor;
+                opacity: 1;
+            }
+        }
+
+        &.menu-booking-item {
+            a {
+                border: 1px solid $white;
+                background: $white;
+                padding: 8px 18px;
+
+                @media (max-width: 992px) {
+                    display: inline-flex;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        &.wpml-ls-item {
+            margin-left: 15px;
+            margin-top: 0;
+
+            @media (max-width: 768px)  {
+                margin-left: 0;
+                margin-bottom: 5px;
+            }
+
+            a {
+                padding-left: 0;
+            }
+        }
+    }
+
+    li + li {
+        margin-left: 15px;
+
+        @media (max-width: 768px)  {
+            margin-left: 0;
+        }
+    }
+}
+
+.wpml-ls-legacy-list-horizontal.wpml-ls-statics-footer {
+    background-color: $accent;
+    margin-top: -60px;
+    margin-bottom: 0;
+    padding-bottom: 65px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 992px) {
+        margin-top: -50px;
+        padding-bottom: 40px;
+    }
+
+    ul {
+        li {
+            a {
+                background-color: transparent;
+                color: $textColor;
+                text-transform: uppercase;
+                letter-spacing: 0.96px;
+                font-size: 16px;
+                line-height: 20px;
+                opacity: .6;
+                transition: all .2s ease;
+
+                &:hover {
+                    background-color: transparent;
+                    color: $textColor;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.footer__logo-img {
+    max-width: 806px;
+    display: flex;
+    margin: 0 auto 50px auto;
+
+    @media (max-width: 1200px) {
+        max-width: 706px;
+    }
+
+    @media (max-width: 992px) {
+        max-width: 80%;
+        margin: 0 auto 30px auto;
+    }
+
+    @media (max-width: 476px) {
+        max-width: 70%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .footer {
+        &-wrapper {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        &__logo {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+    }   
+    .footer-menu {
+        padding: 15px 0px;
+        margin-bottom: 30px;
+        &__list {
+            display: block;
+        }
+    }
+}

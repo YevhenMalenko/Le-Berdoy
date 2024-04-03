@@ -1,0 +1,34 @@
+.map-section {
+
+    .maps-marker-pro {
+        z-index: 5;
+    }
+    
+    .leaflet-container {
+        @media (max-width: 1200px) {
+            height: 620px!important;
+        }
+
+        @media (max-width: 992px) {
+            height: 560px!important;
+        }
+
+        @media (max-width: 768px) {
+            height: 420px!important;
+        }
+
+        @media (max-width: 576px) {
+            height: 360px!important;
+        }
+    }
+    .lmm-panel {
+        display: none;
+    }
+    .lmm-listmarkers {
+        display: none;
+    }
+    .leaflet-control-layers {
+        display: none;
+    }
+
+}

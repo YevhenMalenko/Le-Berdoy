@@ -1,0 +1,127 @@
+.booking-form {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: 5;
+}
+.book-widget {
+    height: 70px;
+}
+.book-widget-bg {
+    border: none!important;
+    border-left: 1px solid $accent!important;
+    padding: 0px!important;
+}
+.book-container .book-form-inline .book-form-control {
+    border: none;
+    box-shadow: none;
+}
+.book-widget-booking-strip-size .icon-book-calendar {
+    display: none!important;
+}
+#book-guests-holder {
+    display: none;
+}
+.book-btn {
+    height: 68px;
+    width: 195px!important;
+    font-family: $fontText!important;
+    font-weight: 300!important;
+    font-size: 16px!important;
+    line-height: 19px!important;
+    text-align: center!important;
+    letter-spacing: 0.06em!important;
+    text-transform: uppercase!important;
+    background: $accent!important;
+    border-color: $accent!important;
+    transition: all .3s ease;
+    &:hover {
+        background-color: $white!important;
+        color: $textColor!important;
+    }
+    &:active:focus, 
+    &:focus {
+ 
+    }
+}
+.book-container .book-form-inline .book-control-label {
+    color: $labelColor!important;
+    font-family: $fontText!important;
+    font-weight: 300!important;
+    font-size: 13px!important;
+    line-height: 16px!important;
+    text-align: left!important;
+    padding-left: 10px!important;
+    padding-top: 10px!important;
+    cursor: pointer;
+}
+.book-container .book-form-inline .book-form-group {
+    margin-right: 0px!important;
+    border-top: 1px solid $accent;
+    border-right: 1px solid $accent;
+    border-bottom: 1px solid $accent;
+    height: 70px;
+    transition: all .3s ease;
+    cursor: pointer;
+    &:hover {
+        background: $grayBg;
+    }
+}
+.book-container .book-form-inline .book-form-control.datepicker {
+    font-family: $fontText!important;
+    font-weight: 400!important;
+    font-size: 18px!important;
+    line-height: 22px!important;
+    color: $textColor!important;
+    background: transparent;
+    cursor: pointer;
+}
+.book-container .book-form-group.book-va-bottom {
+    padding-top: 0px!important;
+    margin-right: 0px!important;
+    border-right: none;
+}
+
+@media (max-width: 1100px) {
+    .book-container .book-form-inline .book-form-group {
+        width: 180px!important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero .book-widget {
+        padding: 0px;
+    }
+    .book-container .book-form-inline .book-form-group {
+        width: 180px!important;
+    }
+    #book-checkin-holder {
+        display: none;
+    }
+    #book-checkout-holder {
+        display: none;
+    }
+    .book-btn {
+        width: 180px!important;
+    }  
+}
+@media (max-width: 476px) {
+    .hero .book-widget {
+        width: 160px
+    }
+    .book-btn {
+        width: 160px!important;
+    } 
+    .book-container .book-row {
+        margin-left: 0px!important;
+        margin-right: 0px!important;
+    } 
+}
+@media (max-width: 376px) {
+    .hero .book-widget {
+        width: 145px
+    }
+    .book-btn {
+        width: 145px!important;
+    }
+}

@@ -1,0 +1,121 @@
+.single-room-content {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+    padding-top: 30px;
+    min-height: 480px;
+}
+.room-info {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid $accent;
+    padding: 52px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    color: $accent;
+    font-size: 22px;
+    font-family: $fontTitle;
+    p {
+        margin-bottom: 10px;
+    }
+}
+.room-cta {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.icons-section {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 52px;
+    border: 2px solid $accent;
+}
+.icons-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.icon-item {
+    max-width: 50%;
+    width: 100%;
+    margin-bottom: 15px;
+    .icon {
+        .fa-classic, 
+        .fa-regular, 
+        .fa-solid, 
+        .far, 
+        .fas {
+            font-size: 22px;
+        }
+    }
+    &__text {
+        font-size: 18px;
+        padding-left: 20px;
+    }
+}
+.icon-item.disabled {
+    .icon-item__text {
+        text-decoration: line-through;
+    }
+}
+
+
+
+@media(max-width: 992px) {
+    .single-room-content {
+        padding-top: 0px;
+    }
+    .room-info {
+        max-width: 100%;
+        padding: 25px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .room-cta {
+        margin-top: 40px;
+    }
+    .icons-section {
+        max-width: 100%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 25px;
+    }
+    .icon-item {
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 768px) {
+    .room-info {
+        padding: 15px;
+        font-size: 20px;
+    }
+    .room-cta {
+        margin-top: 40px;
+    }
+    .icons-section {
+        padding: 15px;
+    }
+    .icon-item {
+        .icon {
+            .fa-classic, 
+            .fa-regular, 
+            .fa-solid, 
+            .far, 
+            .fas {
+                font-size: 20px;
+            }
+        }
+        &__text {
+            font-size: 16px;
+            padding-left: 15px;
+        }
+    }
+}

@@ -1,0 +1,119 @@
+.rooms {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.rooms-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -10px;
+}
+.room {
+    width: calc(33.33% - 20px);
+    height: 480px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    &:hover &__image {
+        transform: scale(1.05);
+    }
+    &__link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 5;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all .3s ease;
+    }
+    &__info {
+        position: absolute;
+        z-index: 5;
+        top: 300px;
+        padding-left: 50px;
+    }
+    &__title {
+        font-size: 36px;
+        color: $white;
+    }
+}
+.slick-slider {
+    .room {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 1920px) {
+    .room {
+        height: 420px;
+        &__info {
+            top: 240px;
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+    .room {
+        height: 360px;
+        &__info {
+            top: 200px;
+        }
+        &__title {
+            font-size: 32px;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .room {
+        height: 320px;
+        &__info {
+            padding-left: 30px;
+            top: 160px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .room {
+        height: 280px;
+        &__info {
+            top: 140px;
+        }
+        &__title {
+            font-size: 28px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .rooms-list {
+        flex-wrap: wrap;
+        margin: 0px
+    }
+    .room {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        &__info {
+            top: 150px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .rooms {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}

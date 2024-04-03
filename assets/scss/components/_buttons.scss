@@ -1,0 +1,123 @@
+.button {
+    display: inline-block;
+    min-width: 196px;
+    font-family: $fontText;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 22px;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    padding: 19px 20px 16px 20px;
+    cursor: pointer;
+
+    @media (max-width: 476px) {
+        padding: 15px 17px 13px 17px;
+    }
+}
+.button-default {
+    border-color: $textColor;
+    color: $textColor;
+    &:hover {
+        color: $btnTextColor;
+        background-color: $accent;
+        border-color: $accent;
+    }
+}
+.button-light {
+    border-color: $white;
+    color: $white;
+    &:hover {
+        color: $btnTextColor;
+        background-color: $accent;
+        border-color: $accent;
+    }
+}
+.button-primary {
+    border-color: $accent;
+    color: $btnTextColor;
+    font-weight: 700;
+    background-color: $accent;
+    &:hover {
+        color: $textColor;
+        background-color: $white;
+        border-color: $textColor;
+    }
+}
+.button-link {
+    color: $white;
+    font-family: $fontText;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding-right: 35px;
+    transition: all .3s ease;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url('../img/icons/arrow-white.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 21px;
+        height: 8px;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-50%);
+    }
+}
+.button-more {
+    background: $white;
+    color: $accent;
+    border: none;
+    height: 70px;
+    line-height: 70px;
+    max-width: 180px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url('../img/icons/arrow-bottom.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 6px;
+        height: 12px;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+    &:hover {
+        background: $accent;
+        color: $white;
+    }
+    &:hover::after {
+        filter: brightness(0) invert(1);
+    }
+}
+
+@media (max-width: 476px) {
+    .button-more {
+        max-width: 160px;
+        &::after {
+            right: 20px;
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .button-more {
+        max-width: 145px;
+        &::after {
+            right: 12px;
+        }
+    }
+}

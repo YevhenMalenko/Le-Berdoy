@@ -1,0 +1,205 @@
+.about {
+    .container {
+        display: flex;
+    }
+
+    &-content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        &__wrapper {
+            position: relative;
+            width: 110%;
+            left: 0px;
+            border: 2px solid $accent;
+            padding-left: 150px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            padding-right: 100px;
+            min-height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .button {
+            margin-top: 50px;
+        }
+    }
+    &__title {
+        margin-bottom: 50px;
+    }
+    &__text {
+        max-width: 650px;
+        p:last-of-type {
+            margin-bottom: 0px;
+        }
+        li::marker {
+            color: $accent;
+        }
+        a {
+            color: inherit;
+            text-decoration: underline;
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+    &__image {
+        width: 50%;
+        object-fit: cover;
+        height: 100%;
+        position: relative;
+        aspect-ratio: 0.928;
+        z-index: 1;
+
+        @media (max-width: 1200px) {
+            aspect-ratio: 0.81;
+        }
+
+        @media (max-width: 992px) {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            order: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+.about.about_inverse {
+    .about-content {
+        order: 1;
+        &__wrapper {
+            left: -10%;
+        }
+    }
+    .about__image {
+        order: 0;
+    }
+}
+
+@media (max-width: 1600px) {
+    .about {
+        // min-height: calc(100vh - 81px);
+        &-content {
+            &__wrapper {
+                padding-left: 80px;
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+        }
+    }
+    .about.about_inverse {
+        .about-content {
+            &__wrapper {
+                padding-left: 120px;
+                padding-right: 70px;
+            }
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .about {
+        &-content {
+            &__wrapper {
+                padding-left: 60px;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+            .button {
+                margin-top: 0;
+            }
+        }
+        &__title {
+            margin-bottom: 35px;
+        }
+        &__text {
+            margin-bottom: 35px;
+        }
+    }
+    .about.about_inverse {
+        .about-content {
+            &__wrapper {
+                padding-left: 110px;
+                padding-right: 60px;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .about {
+        margin-bottom: 20px;
+
+        .container {
+            flex-wrap: wrap;
+            height: auto;
+        }
+        &-content {
+            width: 100%;
+            order: 1;
+            &__wrapper {
+                position: static;
+                width: 100%;
+                padding-left: 40px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-right: 40px;
+            }
+        }
+        &__title {
+            text-align: center;
+        }
+        &__text {
+            max-width: 100%;
+        }
+    }
+    .about.about_inverse {
+        .about-content {
+            &__wrapper {
+                padding-left: 40px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                padding-right: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        &-content {
+            &__wrapper {
+                padding-left: 15px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-right: 15px;
+            }
+        }
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__text {
+            margin-bottom: 20px;
+        }
+    }
+    .about.about_inverse {
+        .about-content {
+            &__wrapper {
+                padding-left: 15px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .about {
+        .button {
+            width: 100%;
+        }
+    }
+}

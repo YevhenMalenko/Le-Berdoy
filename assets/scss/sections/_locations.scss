@@ -1,0 +1,111 @@
+.locations {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.locations-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.location {
+    width: calc(33.33% - 40px);
+    display: block;
+    position: relative;
+    margin: 20px;
+    cursor: pointer;
+    &:hover &__image img {
+        transform: scale(1.05);
+    }
+    &__link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 5;
+    }
+    &__image {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 29px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all .3s ease;
+        }
+    }
+    &__title {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+}
+
+
+
+@media (max-width: 1440px) {
+    .locations {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .location {
+        width: calc(33.33% - 30px);
+        margin: 15px;
+        &__image {
+            height: 300px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+@media (max-width: 992px) {
+    .locations-list {
+        flex-wrap: wrap;
+    }
+    .location {
+        width: calc(50% - 30px);
+        &__title {
+            font-size: 28px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .locations {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .location {
+        width: calc(50% - 20px);
+        margin: 10px;
+        &__title {
+            font-size: 22px;
+        }
+        &__image {
+            height: 250px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .locations {
+        margin-left: 0px;
+        margin-right: 00px;
+    }
+    .location {
+        width: 100%;
+        margin: 10px 0px;
+        &__title {
+            font-size: 22px;
+        }
+        &__image {
+            height: 250px;
+            margin-bottom: 15px;
+        }
+    }
+}

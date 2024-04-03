@@ -1,0 +1,111 @@
+.benefits {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.benefits-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.benefit-card {
+    width: calc(33.33% - 20px);
+    background: $textColor;
+    color: $white;
+    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 50px;
+    padding-right: 50px;
+    &__icon-wrap {
+        height: 100px;
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    &__title {
+        position: relative;
+        padding-bottom: 20px;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: $white;
+            display: block;
+            left: 0px;
+            bottom: 0px;
+        }
+    }
+}
+.benefit-card.benefit-card_light {
+    background: transparent;
+    border: 1px solid $accent;
+    color: $textColor;
+    .benefit-card__title {
+        position: relative;
+        padding-bottom: 20px;
+        &::before {
+            background: $accent;
+        }
+    }
+
+}
+
+@media (max-width: 1440px) {
+    .benefit-card {
+        padding-top: 50px;
+        padding-bottom: 40px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-bottom: 25px;
+        &__icon-wrap {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .benefits {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .benefit-card {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefit-card {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .benefit-card {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        &__icon-wrap {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 476px) {
+    .benefit-card {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
